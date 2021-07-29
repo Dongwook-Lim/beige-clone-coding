@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@200&display=swap');
+@import "_fonts";
+@import "_colors";
+@import "_types";
+
+h1{
+    @extend %title;
+}
+
+a{
+    @extend %nav;
+}
+
+.post__header, .post__date, .post__author, .post__footer, .post__category{
+    @extend %content-1;
+}
+
+.post__content{
+    @extend %content-2;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    padding: 0 1.5vw;
+    position: fixed;
+    
+    & > *{
+        align-self: center;
+    }
+    h1{
+        width: 18.5vw;
+        &:hover{
+            cursor: pointer;
+        } 
+    }
+    nav{
+        width: 60vw;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                display: flex;
+                align-items: center;
+                &:nth-child(1){
+                    span{
+                        background-color: $color-1;
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        background-color: $color-2;
+                    }
+                }
+                &:nth-child(3){
+                    span{
+                        background-color: $color-3;
+                    }
+                }
+                &:nth-child(4){
+                    span{
+                        background-color: $color-4;
+                    }
+                }
+                &:nth-child(5){
+                    span{
+                        background-color: $color-5;
+                    }
+                }
+                &:nth-child(6){
+                    span{
+                        background-color: $color-6;
+                    }
+                }
+                span{
+                    margin-right: 5px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }    
+            }
+        }
+    }
+    i{
+        width: 18.5vw;
+        font-size: 1.2rem;
+        text-align: end;
+        &:hover{
+            cursor: pointer;
+        } 
+    }
+    
+}
+
+.posts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 40vw);
+    padding-top: 40px;
+    .post:nth-child(6n+1){
+        background-color: $color-1;
+        @extend %type-1;
+    }
+    .post:nth-child(6n+2){
+        background-color: $color-2;
+        @extend %type-1;
+    }
+    .post:nth-child(6n+3){
+        background-color: $color-3;
+        @extend %type-2;
+    }
+    .post:nth-child(6n+4){
+        background-color: $color-4;
+        @extend %type-1;
+    }
+    .post:nth-child(6n+5){
+        background-color: $color-5;
+        @extend %type-1;
+    }
+    .post:nth-child(6n){
+        background-color: $color-6;
+        @extend %type-2;
+    }
+}

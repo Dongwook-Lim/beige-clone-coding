@@ -1,0 +1,114 @@
+%type-1{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+        .post__content{
+            .visible{
+                display: none;
+            }
+            .invisible{
+                display: block;
+            }
+        }
+    }
+    .post__header, .post__footer{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .post__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .visible{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            img{
+                object-fit: contain;
+                width: 70%;
+            }
+            p{
+                text-align: center;
+                margin-top: 35px;
+            }
+        }
+        .invisible{
+            display: none;
+            width: 75%;
+            text-align: start;
+            font-style: italic;
+        }
+    }
+}
+
+%type-2{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:hover{
+        cursor: pointer;
+        .post__content{
+            .visible{
+                display: none;
+            }
+            .invisible{
+                display: block;
+            }
+        }
+    }
+    .post__header, .post__footer{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .post__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .visible{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
+            img{
+                object-fit: contain;
+                width: 70%;
+            }
+            p{
+                text-align: center;
+                margin-top: 35px;
+            }
+        }
+        .invisible{
+            display: none;
+            width: 100%;
+            height: 100%;
+            img{
+                object-position: center;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
